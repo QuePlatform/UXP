@@ -1,0 +1,27 @@
+{
+    "manifestVersion": 5,
+    "id": "org.addque.queplugin",
+    "name": "Que Content Credentials",
+    "version": "0.1.0",
+    "minimumRequiredRuntimeVersion": "5.0",
+    "host": [
+      { "app": "PS", "minVersion": "23.0.0" }
+    ],
+    "entrypoints": [
+      {
+        "type": "panel",
+        "id": "que.panel",
+        "label": "Que",
+        "main": "panel.html"
+      }
+    ],
+    "permissions": {
+      "network": {
+        "domains": [
+          "dev-api.addque.org",
+          "*.amazonaws.com",
+          "*.s3.amazonaws.com"
+        ]
+      }
+    }
+  }

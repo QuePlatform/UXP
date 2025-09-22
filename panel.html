@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      body {
+        font-family: ui-sans-serif, system-ui, sans-serif;
+        padding: 12px;
+        gap: 8px;
+      }
+      label {
+        display: block;
+        margin-bottom: 8px;
+      }
+      input,
+      textarea,
+      button {
+        width: 100%;
+        box-sizing: border-box;
+      }
+      textarea {
+        height: 120px;
+      }
+      pre {
+        background: #f4f4f4;
+        padding: 8px;
+        height: 140px;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <label>
+      API Base
+      <input
+        id="apiBase"
+        type="text"
+        value="https://dev-api.addque.org"
+      />
+    </label>
+
+    <label>
+      API Key
+      <input id="apiKey" type="password" placeholder="x-api-key" />
+    </label>
+
+    <label>
+      Manifest JSON
+      <textarea
+        id="manifest"
+        placeholder='{"title":"My Asset","assertions":[...]}'
+      ></textarea>
+    </label>
+
+    <button id="pick">Pick File</button>
+    <button id="sign" disabled>Upload & Sign</button>
+    <button id="save" disabled>Save Signed File</button>
+
+    <pre id="log"></pre>
+
+    <script src="queApi.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
